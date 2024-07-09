@@ -114,6 +114,11 @@ rootProject.allprojects {
         google()
         mavenCentral()
         maven { url 'https://developer.huawei.com/repo/' }
+        configurations.all{
+            resolutionStrategy{
+                force "com.google.android.gms:play-services-location:20.0.0"
+            }
+        }
     }
 }
 
@@ -127,7 +132,7 @@ dependencies {
     api(group: 'com.transistorsoft', name:'tslocationmanager', version: '+')
   }
 
-  implementation "com.google.android.gms:play-services-location:$playServicesLocationVersion"
+  implementation "com.google.android.gms:play-services-location:20.0.0"
   // HMS location
   implementation("com.huawei.hms:location:$hmsLocationVersion") {
     exclude(group: "com.huawei.hms", module: 'hianalytics')
