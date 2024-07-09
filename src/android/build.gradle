@@ -132,7 +132,7 @@ dependencies {
     api(group: 'com.transistorsoft', name:'tslocationmanager', version: '+')
   }
 
-  implementation 'com.google.android.gms:play-services-location:21.0.1'
+  implementation "com.google.android.gms:play-services-location:$playServicesLocationVersion"
   // HMS location
   implementation("com.huawei.hms:location:$hmsLocationVersion") {
     exclude(group: "com.huawei.hms", module: 'hianalytics')
